@@ -1,0 +1,12 @@
+# Apache. Mirrors the meta CSP in index.html, plus frame-ancestors. Widen both files together.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "no-referrer"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+  Header always set Content-Security-Policy "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://scrt.link; manifest-src 'self'; worker-src 'self' blob:; frame-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-ancestors 'none'"
+</IfModule>
+<Files "manifest.webmanifest">
+  ForceType application/manifest+json
+</Files>
+Options -Indexes

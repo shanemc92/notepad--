@@ -1,0 +1,10 @@
+# Local only, never published.
+archive/
+
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+__pycache__/
+*.pyc
