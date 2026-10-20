@@ -1,7 +1,7 @@
 // notepad-- service worker
 // 1) offline: network-first for the app shell, cache fallback (updates land on the next online load)
 // 2) Android share target: receives the POST and hands files to the page via a cache inbox
-const APP = 'nph-app-49a26e3804';
+const APP = 'nph-app-31f69074ff';
 const INBOX = 'nph-share';
 const SHELL = ['./', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png',
                'icons/icon-maskable-512.png', 'icons/apple-touch-icon.png'];
